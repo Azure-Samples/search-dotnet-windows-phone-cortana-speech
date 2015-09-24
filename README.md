@@ -1,7 +1,7 @@
 ---
-services: Azure Search, Cortana
-platforms: Azure
-author: azure
+services: search
+platforms: dotnet
+author: liamca
 ---
 
 # Azure Search Speech Recognition Sample using Cortana for Windows Phone
