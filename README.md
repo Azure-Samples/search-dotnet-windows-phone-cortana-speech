@@ -12,3 +12,7 @@ The sample is split into 3 parts, which is important if you are following the co
 ## Running this sample
 
 The code included in this repository is used as part of the Microsoft Virtual Academy course on Azure Search.  For more details on this sample, please visit: http://www.microsoftvirtualacademy.com/liveevents/adding-microsoft-azure-search-to-your-websites-and-apps
+
+---
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
