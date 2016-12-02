@@ -47,7 +47,7 @@ namespace TrailFinder.DataModel
         public static async Task<IEnumerable<ItemViewModel>> GeoSearchAsync(Geocoordinate coordinate, string filter = null)
         {
             var position = coordinate.Point.Position;
-            var orderByFilter = String.Format("geo.distance(LOCATION, geography'POINT({0} {1})')", position.Longitude, position.Latitude);
+            var orderByFilter = $"geo.distance(LOCATION, geography'POINT({position.Longitude} {position.Latitude})')";
                        
 
             var searchParameters = new SearchParameters()
@@ -71,7 +71,7 @@ namespace TrailFinder.DataModel
             var searchFilter = BaseFilter;
             if (!String.IsNullOrEmpty(filter))
             {
-                searchFilter = String.Format("{0} and {1} eq '{2}'", searchFilter, FacetName, filter);
+                searchFilter = $"{searchFilter} and {FacetName} eq '{filter}'";
             }
             return searchFilter;
         }
