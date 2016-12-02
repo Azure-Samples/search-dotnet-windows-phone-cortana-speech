@@ -13,7 +13,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Devices.Geolocation;
@@ -168,7 +167,7 @@ namespace TrailFinder.ViewModels
 
         private async Task SearchTrails(string filter = null)
         {
-            SearchType = String.Format("Trails like {0}", SearchTerm);
+            SearchType = $"Trails like {SearchTerm}";
             IsLoading = true;
             Items.Clear();
             var results = await SearchService.SearchAsync(SearchTerm, filter);

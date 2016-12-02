@@ -1,10 +1,10 @@
 Trail Finder app part 3
 -----------------------
 
-Remember to restore the Azure Search nuget package and add your search service credentials :)
+Remember to restore the Azure Search nuget package :)
 
 This version contains:
-0. Basic WP infrastructure
-1. Search functionality
-2. Speech recognition
-3. Cortana commands
+A. Basic WP infrastructure
+B. Search functionality
+C. Speech recognition
+D. Cortana commands

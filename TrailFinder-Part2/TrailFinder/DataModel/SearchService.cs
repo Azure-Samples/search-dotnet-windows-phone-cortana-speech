@@ -23,9 +23,9 @@ namespace TrailFinder.DataModel
 {
     public class SearchService
     {
-        private const string ServiceName = <your service name>;
-        private const string IndexName = <your index name>;
-        private const string QueryKey = <your query key>;
+        private const string ServiceName = "azs-playground";
+        private const string IndexName = "features-wa";
+        private const string QueryKey = "A7FAA41DECA59F1E8BCAA90CC73E2A75";
 
         public static async Task<IEnumerable<ItemViewModel>> SearchAsync(string searchString)
         {
@@ -39,7 +39,7 @@ namespace TrailFinder.DataModel
         public static async Task<IEnumerable<ItemViewModel>> GeoSearchAsync(Geocoordinate coordinate)
         {
             var position = coordinate.Point.Position;
-            var orderByFilter = String.Format("geo.distance(LOCATION, geography'POINT({0} {1})')", position.Longitude, position.Latitude);
+            var orderByFilter = $"geo.distance(LOCATION, geography'POINT({position.Longitude} {position.Latitude})')";
 
             var searchParameters = new SearchParameters()
             {

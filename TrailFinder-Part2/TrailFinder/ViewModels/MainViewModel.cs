@@ -99,7 +99,7 @@ namespace TrailFinder.ViewModels
         private async Task SearchTrails()
         {
             IsLoading = true;
-            SearchType = String.Format("Trails like {0}", SearchTerm);
+            SearchType = $"Trails like {SearchTerm}";
             var results = await SearchService.SearchAsync(SearchTerm);
             AddSearchResults(results);
         }
